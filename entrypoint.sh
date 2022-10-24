@@ -1,3 +1,3 @@
 #!/bin/bash
 message="testing"
-echo "message='testmeout'" >> $GITHUB_OUTPUT
+echo "message=testmeout2" >> $GITHUB_OUTPUT
