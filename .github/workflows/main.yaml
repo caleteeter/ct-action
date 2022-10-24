@@ -13,6 +13,6 @@ jobs:
         uses: ./
         id: hello
         with:
-          comment: "$SUPER_SECRET"
+          comment: $SUPER_SECRET
       - name: Get output
         run: echo "The test message was ${{ steps.hello.outputs.message }}"
