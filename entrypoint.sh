@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $1 == "testsecret"]; then
+if [[ $1 == "testsecret" ]]; then
   echo "found variable"
 else
   echo "didn't find variable"
