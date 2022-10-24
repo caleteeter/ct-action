@@ -11,4 +11,4 @@ jobs:
         uses: ./
         id: hello
       - name: Get output
-        run: echo ${{ steps.hello.outputs.hello }}
+        run: echo "${{ steps.hello.outputs.hello }}"
