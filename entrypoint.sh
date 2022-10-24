@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo $1 > testfile
-cat testfile
+if [[ -z $1 ]]; then 
+  echo "var found"
+fi
 
 echo "message=testmeout2" >> $GITHUB_OUTPUT
