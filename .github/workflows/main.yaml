@@ -11,4 +11,4 @@ jobs:
         uses: ./
         id: hello
       - name: Get output
-        run: echo "test"
+        run: echo "The test message was ${{ steps.hello.outputs.message }}"
