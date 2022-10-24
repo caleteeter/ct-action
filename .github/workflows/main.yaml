@@ -8,9 +8,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Hello action
+        shell: bash
+        env: 
+          SUPER_SECRET: ${{ secrets.TESTSECRET }}
         uses: ./
         id: hello
         with:
-          comment: ${{ secrets.TESTSECRET }}
+          comment: $SUPER_SECRET
       - name: Get output
         run: echo "The test message was ${{ steps.hello.outputs.message }}"
