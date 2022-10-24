@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo $1
 if [[ $1 == "testsecret" ]]; then
   echo "found variable"
 else
