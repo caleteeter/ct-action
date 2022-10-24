@@ -1,6 +1,11 @@
 #!/bin/bash
 
-echo $1
+if [ $1 == "testsecret"]; then
+  echo "found variable"
+else
+  echo "didn't find variable"
+fi
+
 #if [[ -z $1 ]]; then 
 #  echo "var found"
 #else
