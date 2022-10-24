@@ -1,0 +1,9 @@
+# action.yaml
+name: 'CT Hello'
+description: 'Testing hello'
+outputs:
+  message: 
+    description: 'The testing message'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
