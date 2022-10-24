@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $1
+echo $SUPER_SECRET
 if [[ $1 == "testsecret" ]]; then
   echo "found variable"
 else
