@@ -11,6 +11,6 @@ jobs:
         uses: ./
         id: hello
         with:
-          comment: ${{ secrets.TESTSECRET }}
+          comment: "testsecret"
       - name: Get output
         run: echo "The test message was ${{ steps.hello.outputs.message }}"
