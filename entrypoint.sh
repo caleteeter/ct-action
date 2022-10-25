@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "test"
-ls -s
+cat Dockerfile
 echo "message=testmeout2" >> $GITHUB_OUTPUT
