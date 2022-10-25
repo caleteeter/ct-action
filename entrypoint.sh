@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "test"
-ls -a
+ls -s
 echo "message=testmeout2" >> $GITHUB_OUTPUT
