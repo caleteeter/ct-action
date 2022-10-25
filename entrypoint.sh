@@ -1,6 +1,4 @@
 #!/bin/bash
 
-echo "test"
-cat secret > testfile
-cat testfile
+ls -s
 echo "message=testmeout2" >> $GITHUB_OUTPUT
