@@ -7,16 +7,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: 'echo "$SSECRET" > secret'
-        shell: bash
-        env:
-          SSECRET: ${{secrets.TESTSECRET}}
       - name: Hello action
-        env: 
-          SUPER_SECRET: ${{ secrets.TESTSECRET }}
         uses: ./
         id: hello
-        with:
-          comment: $SUPER_SECRET
-      - name: Get output
-        run: echo "The test message was ${{ steps.hello.outputs.message }}"

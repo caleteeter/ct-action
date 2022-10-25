@@ -1,15 +1,6 @@
 # action.yaml
 name: 'CT Hello'
 description: 'Testing hello'
-inputs:
-  comment: 
-    description: 'Input'
-    required: true
-outputs:
-  message: 
-    description: 'The testing message'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.comment }}
