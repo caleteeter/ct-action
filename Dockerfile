@@ -4,4 +4,4 @@ COPY cert /opt/ccf/bin/
 COPY key /opt/ccf/bin/
 COPY set_js_app.json /opt/ccf/bin/
 
-ENTRYPOINT cd /opt/ccf/bin && ./scurl.sh https://identitylogapp.confidential-ledger.azure.com/gov/proposals -k --signing-cert cert --signing-key key -X POST -H "Content-Type: application/json" --data-binary @set_js_app.json | jq .proposal_id
+ENTRYPOINT cd /opt/ccf/bin && ./scurl.sh https://identitylogapp.confidential-ledger.azure.com/gov/proposals -k --signing-cert cert --signing-key key -X POST -H "Content-Type: application/json" --data-binary @set_js_app.json | proposal_id = $(jq .proposal_id) && echo "proposal_id=$(proposal_id)"

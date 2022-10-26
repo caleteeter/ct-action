@@ -1,6 +1,9 @@
 # action.yaml
 name: 'CCF deployment'
 description: 'CCF deployment'
+outputs:
+  proposal-id:
+    description: 'The proposal id generated'
 runs:
   using: 'docker'
   image: 'Dockerfile'

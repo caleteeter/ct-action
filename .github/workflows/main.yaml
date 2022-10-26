@@ -20,3 +20,5 @@ jobs:
       - name: mCCF deploy action
         uses: ./
         id: deploy
+      - name: Get the proposal id
+        run: echo "The proposal id is ${{ steps.ccf-deploy.outputs.proposal-id }}"
