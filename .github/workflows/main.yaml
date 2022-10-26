@@ -7,11 +7,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Cert
-        run: 'echo "$CERT" > cert'
+      - run: 'echo "$CERT" > cert'
         shell: bash
         env:
           CERT: ${{ secrets.MEMBERCERT }}
+      - run: 'echo "$KEY" > key'
+        shell: bash
+        env:
+          KEY: ${{ secrets.MEMBERKEY }}
       - name: mCCF deploy action
         uses: ./
         id: deploy

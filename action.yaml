@@ -3,10 +3,14 @@ name: 'CCF deployment'
 description: 'CCF deployment'
 inputs:
   cert:
-    description: 'Input'
+    description: 'Input certificate'
+    required: true
+  key:
+    description: 'Input key'
     required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.cert }}
+    - ${{ inputs.key }}
