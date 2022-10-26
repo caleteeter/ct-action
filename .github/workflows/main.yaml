@@ -7,11 +7,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - run: 'echo "$CERT" > cert'
+      - run: 'echo "$CERT" > /opt/ccf/bin/cert'
         shell: bash
         env:
           CERT: ${{ secrets.MEMBERCERT }}
-      - run: 'echo "$KEY" > key'
+      - run: 'echo "$KEY" > /opt/ccf/bin/key'
         shell: bash
         env:
           KEY: ${{ secrets.MEMBERKEY }}
