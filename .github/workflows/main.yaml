@@ -3,10 +3,15 @@ on: [push]
 jobs:
   hello_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to deploy mCCF application
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Hello action
+      - name: Cert
+        run: 'echo "$CERT" > cert'
+        shell: bash
+        env:
+          CERT: ${{ secrets.MEMBERCERT }}
+      - name: mCCF deploy action
         uses: ./
-        id: hello
+        id: mccf_deploy

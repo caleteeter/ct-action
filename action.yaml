@@ -1,6 +1,12 @@
 # action.yaml
-name: 'CT Hello'
-description: 'Testing hello'
+name: 'CCF deployment'
+description: 'CCF deployment'
+inputs:
+  cert: 'MemberCertificate'
+    description: 'Input'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.cert }}
