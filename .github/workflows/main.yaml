@@ -14,4 +14,4 @@ jobs:
           CERT: ${{ secrets.MEMBERCERT }}
       - name: mCCF deploy action
         uses: ./
-        id: mccf_deploy
+        id: deploy

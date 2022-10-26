@@ -2,7 +2,7 @@
 name: 'CCF deployment'
 description: 'CCF deployment'
 inputs:
-  cert: 'MemberCertificate'
+  cert:
     description: 'Input'
     required: true
 runs:
