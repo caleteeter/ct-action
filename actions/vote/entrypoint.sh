@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "$1"
+echo "$proposal"
 
 cd /opt/ccf/bin
 
