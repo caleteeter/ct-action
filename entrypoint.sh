@@ -1,4 +1,8 @@
 #!/bin/bash
 
-proposal=$(date)
+cd /opt/ccf/bin
+content=$(./scurl.sh https://identitylogapp.confidential-ledger.azure.com/gov/proposals -k --signing-cert cert --signing-key key -X POST -H "Content-Type: application/json" --data-binary @set_js_app.json)
+proposal=$(echo "${content}" | jq '.proposal_id')
+
+# proposal=$(date)
 echo "proposal=$proposal" >> $GITHUB_OUTPUT
