@@ -1,9 +1,9 @@
 # action.yaml
-name: 'CCF deployment'
-description: 'CCF deployment'
+name: 'CCF voting'
+description: 'CCF voting'
 outputs:
-  proposal:
-    description: 'The proposal id generated'
+  status:
+    description: 'The status of the proposal'
 runs:
   using: 'docker'
   image: 'Dockerfile'

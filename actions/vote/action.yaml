@@ -1,0 +1,16 @@
+# action.yaml
+name: 'CCF deployment'
+description: 'CCF deployment'
+inputs:
+  proposal-id:
+    description: 'Proposal id to approve'
+    required: true
+    default: "test"
+outputs:
+  status:
+    description: 'The status of the proposal'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args: 
+    - ${{ inputs.proposal-id }}
