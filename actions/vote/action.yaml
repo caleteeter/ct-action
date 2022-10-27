@@ -2,7 +2,7 @@
 name: 'CCF deployment'
 description: 'CCF deployment'
 inputs:
-  proposal-id:
+  proposal:
     description: 'Proposal id to approve'
     required: true
     default: "test"
@@ -13,4 +13,4 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args: 
-    - ${{ inputs.proposal-id }}
+    - ${{ inputs.proposal }}
