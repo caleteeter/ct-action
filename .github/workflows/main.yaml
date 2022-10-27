@@ -21,4 +21,4 @@ jobs:
         uses: ./
         id: deploy
       - name: Get the proposal id
-        run: echo "The proposal id is ${{ steps.deploy.outputs.proposal-id }}"
+        run: echo "The proposal id is ${{ steps.deploy.outputs.proposal }}"

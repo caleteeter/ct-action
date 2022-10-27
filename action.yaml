@@ -2,7 +2,7 @@
 name: 'CCF deployment'
 description: 'CCF deployment'
 outputs:
-  proposal-id:
+  proposal:
     description: 'The proposal id generated'
 runs:
   using: 'docker'
