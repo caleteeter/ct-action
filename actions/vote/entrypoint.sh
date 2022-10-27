@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $*
+echo "$*"
 
 cd /opt/ccf/bin
 
