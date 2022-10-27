@@ -1,4 +1,4 @@
-#!/bin/sh -l
+#!/bin/bash
 
 proposal=$(date)
 echo "proposal=$proposal" >> $GITHUB_OUTPUT
