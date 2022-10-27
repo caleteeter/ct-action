@@ -4,7 +4,7 @@ echo "$proposal"
 
 cd /opt/ccf/bin
 
-url="https://identitylogapp.confidential-ledger.azure.com/gov/proposals/$proposal/ballots"
+url="https://identitylogapp.confidential-ledger.azure.com/gov/proposals/$(proposal)/ballots"
 
 echo "${url}"
 
