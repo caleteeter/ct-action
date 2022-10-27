@@ -2,6 +2,7 @@
 
 cd /opt/ccf/bin
 
+echo $proposal
 url=https://identitylogapp.confidential-ledger.azure.com/gov/proposals/${proposal}/ballots
 echo "${url}"
 
