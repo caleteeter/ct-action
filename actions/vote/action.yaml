@@ -12,8 +12,5 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    proposal:
-      ${{ inputs.proposal }}
   args: 
     - "proposal:${{ inputs.proposal }}"
