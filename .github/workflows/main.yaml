@@ -26,6 +26,6 @@ jobs:
         uses: ./actions/vote
         id: vote
         env:
-          proposal: "${{ steps.deploy.outputs.proposal }}"
+          proposal: "testmeout"
       - name: Get the status
         run: echo "The proposal id is ${{ steps.vote.outputs.status }}"
