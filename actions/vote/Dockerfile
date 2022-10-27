@@ -5,4 +5,4 @@ COPY key /opt/ccf/bin/
 COPY accept.json /opt/ccf/bin/
 COPY entrypoint.sh actions/vote/entrypoint.sh
 
-ENTRYPOINT ./actions/vote/entrypoint.sh "test"
+ENTRYPOINT ./actions/vote/entrypoint.sh "$1"
