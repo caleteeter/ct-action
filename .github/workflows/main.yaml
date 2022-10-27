@@ -18,7 +18,7 @@ jobs:
         env:
           KEY: ${{ secrets.MEMBERKEY }}
       - name: mCCF deploy action
-        uses: ./
+        uses: ./actions/deploy
         id: deploy
       - name: Get the proposal id
         run: echo "The proposal id is ${{ steps.deploy.outputs.proposal }}"
