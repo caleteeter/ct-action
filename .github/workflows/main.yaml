@@ -8,17 +8,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Get member cert
-        run: 'echo "$CERT" > actions/vote/cert'
+        run: 'echo "$CERT" > actions/deploy/cert && echo "$CERT" > actions/vote/cert'
         shell: bash
         env:
           CERT: ${{ secrets.MEMBERCERT }}
       - name: Get member key
-        run: 'echo "$KEY" > actions/vote/key'
+        run: 'echo "$KEY" > actions/deploy/key && echo "$KEY" > actions/vote/key'
         shell: bash
         env:
           KEY: ${{ secrets.MEMBERKEY }}
+      - name: mCCF deploy action
+        uses: ./actions/deploy
+        id: deploy
+      - name: Get the proposal id
+        run: echo "The proposal id is ${{ steps.deploy.outputs.proposal }}"
       - name: mCCF approve action
         uses: ./actions/vote
         id: vote
+        with:
+          proposal-id: ${{ steps.deploy.outputs.proposal }}
       - name: Get the status
         run: echo "The proposal id is ${{ steps.vote.outputs.status }}"
