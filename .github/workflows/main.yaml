@@ -8,12 +8,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Get member cert
-        run: 'echo "$CERT" > cert'
+        run: 'echo "$CERT" > actions/deploy/cert'
         shell: bash
         env:
           CERT: ${{ secrets.MEMBERCERT }}
       - name: Get member key
-        run: 'echo "$KEY" > key'
+        run: 'echo "$KEY" > actions/deploy/key'
         shell: bash
         env:
           KEY: ${{ secrets.MEMBERKEY }}
