@@ -25,7 +25,5 @@ jobs:
       - name: mCCF approve action
         uses: ./actions/vote
         id: vote
-        with:
-          proposal: ${{ steps.deploy.outputs.proposal }}
       - name: Get the status
         run: echo "The proposal id is ${{ steps.vote.outputs.status }}"
