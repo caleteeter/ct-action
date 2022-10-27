@@ -2,7 +2,7 @@
 
 cd /opt/ccf/bin
 
-pp=eval echo $proposal
+pp=$(eval echo $proposal)
 url=https://identitylogapp.confidential-ledger.azure.com/gov/proposals/${pp}/ballots
 echo ${pp}
 
