@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $*
+
 cd /opt/ccf/bin
 
 url="https://identitylogapp.confidential-ledger.azure.com/gov/proposals/$1/ballots"
