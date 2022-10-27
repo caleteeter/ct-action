@@ -5,4 +5,4 @@ COPY key /opt/ccf/bin/
 COPY set_js_app.json /opt/ccf/bin/
 COPY entrypoint.sh actions/deploy/entrypoint.sh
 
-ENTRYPOINT ./entrypoint.sh
+ENTRYPOINT ./actions/deploy/entrypoint.sh
