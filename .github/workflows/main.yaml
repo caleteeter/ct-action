@@ -21,7 +21,7 @@ jobs:
         uses: ./actions/deploy
         id: deploy
         env:
-          ccfurl: ${{ env.CCF_URL }}
+          ccfurl: ${{ CCF_URL }}
       - name: Get the proposal id
         run: echo "The proposal id is ${{ steps.deploy.outputs.proposal }}"
       - name: mCCF approve action
@@ -29,6 +29,6 @@ jobs:
         id: vote
         env:
           proposal: ${{ steps.deploy.outputs.proposal }}
-          ccfurl: ${{ env.CCF_URL }}
+          ccfurl: ${{ CCF_URL }}
       - name: Get the status
         run: echo "The proposal id is ${{ steps.vote.outputs.status }}"
