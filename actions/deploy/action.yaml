@@ -5,6 +5,9 @@ inputs:
   application:
     description: 'The application bundle to be deployed to CCF'
     required: true
+  ccfurl:
+    description: 'The base endpoint for CCF'
+    required: true
 outputs:
   status:
     description: 'The status of the proposal'
@@ -13,3 +16,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.application }}
+    - ${{ inputs.ccfurl }}
