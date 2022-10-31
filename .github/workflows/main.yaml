@@ -4,6 +4,8 @@ jobs:
   ccf-deploy:
     runs-on: ubuntu-latest
     name: Deploy CCF application
+    env:
+      CCF_URL = 'https://identitylogapp.confidential-ledger.azure.com/'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -22,14 +24,14 @@ jobs:
         id: deploy
         with:
           application: 'actions/deploy/set_js_app.json'
-          ccfurl: 'https://identitylogapp.confidential-ledger.azure.com/'
+          ccfurl: $CCF_URL
       - name: Get the proposal id
         run: echo "The proposal id is ${{ steps.deploy.outputs.proposal }}"
       - name: mCCF approve action
         uses: ./actions/vote
         id: vote
         with:
-          ccfurl: 'https://identitylogapp.confidential-ledger.azure.com/'
+          ccfurl: $CCF_URL
           proposal: ${{ steps.deploy.outputs.proposal }}
       - name: Get the status
         run: echo "The proposal id is ${{ steps.vote.outputs.status }}"
