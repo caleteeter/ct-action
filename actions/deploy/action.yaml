@@ -16,4 +16,3 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.application }}
-    - ${{ inputs.ccfurl }}
