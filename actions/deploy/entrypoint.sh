@@ -2,7 +2,7 @@
 
 cp $1 /opt/ccf/bin
 
-echo "$CCF_URLgov/proposals"
+echo "${CCF_URL}gov/proposals"
 
 cd /opt/ccf/bin
 content=$(./scurl.sh $CCF_URLgov/proposals -k --signing-cert cert --signing-key key -X POST -H "Content-Type: application/json" --data-binary @set_js_app.json)
