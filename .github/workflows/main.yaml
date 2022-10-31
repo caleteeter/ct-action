@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy CCF application
     env:
-      CCF_URL = 'https://identitylogapp.confidential-ledger.azure.com/'
+      CCF_URL: 'https://identitylogapp.confidential-ledger.azure.com/'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
