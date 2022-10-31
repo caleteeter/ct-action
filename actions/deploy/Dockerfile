@@ -5,4 +5,6 @@ COPY key /opt/ccf/bin/
 COPY set_js_app.json /opt/ccf/bin/
 COPY entrypoint.sh actions/deploy/entrypoint.sh
 
+RUN echo "The arg value is : $application"
+
 ENTRYPOINT ./actions/deploy/entrypoint.sh
