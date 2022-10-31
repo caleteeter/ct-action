@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo "Application: $1"
-
+app=$1
+echo $app
 url=$(eval echo $ccfurl)
 
 cd /opt/ccf/bin
