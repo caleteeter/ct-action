@@ -1,9 +1,15 @@
 # action.yaml
 name: 'CCF voting'
 description: 'CCF voting'
+inputs:
+  application:
+    description: 'The application bundle to be deployed to CCF'
+    required: true
 outputs:
   status:
     description: 'The status of the proposal'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.application }}

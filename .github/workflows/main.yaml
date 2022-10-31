@@ -20,6 +20,8 @@ jobs:
       - name: mCCF deploy action
         uses: ./actions/deploy
         id: deploy
+        with:
+          application: 'actions/deploy/set_js_app.json'
         env:
           ccfurl: ${{ secrets.CCFURL }}
       - name: Get the proposal id
