@@ -2,6 +2,7 @@
 
 url=$(eval echo $ccfurl)
 
+echo "Application: $1"
 echo $application
 echo $input_application
 
