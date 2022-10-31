@@ -5,6 +5,9 @@ inputs:
   ccfurl:
     description: 'The base endpoint for CCF'
     required: true
+  proposal:
+    description: 'The proposal to approve'
+    required: true
 outputs:
   status:
     description: 'The status of the proposal'
@@ -13,3 +16,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.ccfurl }}
+    - ${{ inputs.proposal }}
