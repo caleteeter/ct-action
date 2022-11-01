@@ -32,6 +32,9 @@ jobs:
       - name: mCCF approve action
         uses: ./actions/vote
         id: vote
+        env:
+          CERTD: ${{ secrets.MEMBERCERT }}
+          KEYD: ${{ secrets.MEMBERKEY }}
         with:
           proposal: ${{ steps.deploy.outputs.proposal }}
       - name: Get the status
