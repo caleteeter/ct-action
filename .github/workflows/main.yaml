@@ -22,6 +22,9 @@ jobs:
       - name: mCCF deploy action
         uses: ./actions/deploy
         id: deploy
+        env:
+          CERTD: ${{ secrets.MEMBERCERT }}
+          KEYD: ${{ secrets.MEMBERKEY }}
         with:
           application: 'actions/deploy/set_js_app.json'
       - name: Get the proposal id
