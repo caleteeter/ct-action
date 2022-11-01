@@ -1,4 +1,4 @@
-# Action for running deployments to CCF
+# Action for running deployment to CCF
 
 This GitHub action is designed to make it easier to deploy application to a CCF network.  The action is not public at this point so to use this effectively you need to do the following.
 
